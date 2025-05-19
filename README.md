@@ -2,7 +2,7 @@
 
 ```java
 public class Triangulo {
-    // Atributos principales de la clase (Identidades -> a, b, c son los lados)
+    // Atributos principales de la clase (Identidades a, b, c son los lados)
     private double area, altura;
     private int a, b, c;
 
@@ -58,7 +58,7 @@ public class Triangulo {
     public double f1() { return area; }
     public double f2() { return altura; }
 
-    // Cartel de salida concatenada (muestra todos los resultados)
+    // Cartel de salida concatenada (muestra los resultados)
     public void imprimirCartel() {
         System.out.println("Lado a: " + a + ", Lado b: " + b + ", Lado c: " + c +
                            ", Área: " + area + ", Altura: " + altura);
@@ -82,7 +82,7 @@ public class Triangulo {
 import java.util.Scanner;
 
 class CoefBinomio {
-    // Método para calcular producto de una secuencia de números (x a n)
+    // Método para calcular producto de una secuencia de números
     int calculo(int x, int n) {
         int resul = 1;
         for (int i = x; i <= n; i++) {
@@ -91,7 +91,7 @@ class CoefBinomio {
         return resul;
     }
 
-    // Método para calcular factorial de un número (factorial clásico)
+    // Método para calcular factorial de un número
     int factorial(int num) {
         int r = 1;
         for (int i = num; i >= 1; i--) {
@@ -100,7 +100,7 @@ class CoefBinomio {
         return r;
     }
 
-    // Método que calcula el coeficiente binomial (usa los dos métodos anteriores)
+    // Método que calcula el coeficiente binomial 
     int coef(int n, int r) {
         int r1 = calculo(n - r + 1, n); // Calcula numerador del binomio
         int r2 = factorial(r);          // Calcula denominador (r!)
@@ -112,7 +112,7 @@ public class TriPascal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Scanner para leer número de filas (Resolviendo literal i del punto)
+        // Scanner para leer número de filas
         System.out.print("Ingrese el número de filas para el Triángulo de Pascal: ");
         int filas = sc.nextInt();
 
@@ -187,7 +187,7 @@ class Recursion {
 
 class FRecur {
 
-    // Suma dos valores recibidos como String (Conversión de tipo)
+    // Suma dos valores recibidos como String
     int G(String a, String b) {
         return F(a, b);
     }
