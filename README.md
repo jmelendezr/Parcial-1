@@ -1,25 +1,22 @@
-PUNTO 2 PARCIAL
+## Punto 2
 
-   public class Triangulo {
-    // Atributos
+```java
+public class Triangulo {
     private double area, altura;
     private int a, b, c;
-  
-     // Constructor
+
     public Triangulo(int la, int lb, int lc) {
         a = la;
         b = lb;
         c = lc;
     }
 
-    // Método para asignar lados (opcional si usas el constructor)
     public void f(int la, int lb, int lc) {
         a = la;
         b = lb;
         c = lc;
     }
 
-    // Método para calcular raíz cuadrada usando aproximación
     private double raiz(double m) {
         double g1, g2;
         g2 = m / 2.0;
@@ -30,57 +27,51 @@ PUNTO 2 PARCIAL
         return g2;
     }
 
-    // Método para calcular el área del triángulo con fórmula de Herón
     public void areaTriangulo() {
         double s = (a + b + c) / 2.0;
         area = raiz(s * (s - a) * (s - b) * (s - c));
     }
 
-    // Método para calcular la altura respecto al lado a
     public void alturaTriangulo() {
         altura = (2 * area) / a;
     }
 
- // Getters y Setters
     public int getA() { return a; }
     public void setA(int a) { this.a = a; }
-
     public int getB() { return b; }
     public void setB(int b) { this.b = b; }
-
     public int getC() { return c; }
     public void setC(int c) { this.c = c; }
-
     public double getArea() { return area; }
     public void setArea(double area) { this.area = area; }
-
     public double getAltura() { return altura; }
     public void setAltura(double altura) { this.altura = altura; }
 
-    // Métodos que retornan área y altura
     public double f1() { return area; }
     public double f2() { return altura; }
 
-    // Método para mostrar todos los datos
     public void imprimirCartel() {
         System.out.println("Lado a: " + a + ", Lado b: " + b + ", Lado c: " + c +
                            ", Área: " + area + ", Altura: " + altura);
     }
 
-    // Método principal para probar la clase
     public static void main(String[] args) {
-        Triangulo t = new Triangulo(5, 6, 7); // Crear objeto con lados
-        t.areaTriangulo();     // Calcular área
-        t.alturaTriangulo();   // Calcular altura
-        t.imprimirCartel();    // Mostrar resultados
-    }
+        Triangulo t = new Triangulo(5, 6, 7);
+        t.areaTriangulo();
+        t.alturaTriangulo();
+        t.imprimirCartel();
+    }
 }
+```
 
+---
 
-PUNTO 3 PARCIAL
+## Punto 3
+
+```java
+import java.util.Scanner;
 
 class CoefBinomio {
-
     int calculo(int x, int n) {
         int resul = 1;
         for (int i = x; i <= n; i++) {
@@ -113,7 +104,6 @@ public class TriPascal {
         CoefBinomio objeto = new CoefBinomio();
 
         for (int i = 0; i < filas; i++) {
-            // Espacios
             for (int k = filas - i; k > 0; k--) {
                 System.out.print("  ");
             }
@@ -126,8 +116,14 @@ public class TriPascal {
         System.out.println("Fin de la ejecución del Triángulo de Pascal.");
     }
 }
+```
 
-PARCIAL 4 
+---
+
+## Punto 4
+
+```java
+import java.util.Scanner;
 
 class Recursion {
 
@@ -158,11 +154,8 @@ class Recursion {
     }
 
     int fact(int x) {
-        if (x == 0) {
-            return 1;
-        } else {
-            return x * fact(x - 1);
-        }
+        if (x == 0) return 1;
+        else return x * fact(x - 1);
     }
 }
 
@@ -173,19 +166,13 @@ class FRecur {
     }
 
     int fact(int x) {
-        if (x == 0) {
-            return 1;
-        } else {
-            return x * fact(x - 1);
-        }
+        if (x == 0) return 1;
+        else return x * fact(x - 1);
     }
 
     int multi(int a, int b) {
-        if (b == 0) {
-            return 0;
-        } else {
-            return a + multi(a, b - 1);
-        }
+        if (b == 0) return 0;
+        else return a + multi(a, b - 1);
     }
 
     int fibo(int n) {
@@ -205,3 +192,5 @@ class FRecur {
         }
     }
 }
+```
+
